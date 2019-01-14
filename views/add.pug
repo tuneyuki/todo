@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 Add todo.
+
+  p 入力フォーム
+
+  .EditTodo
+    form(action="/add" method="post")
+      div
+        input(type="text" name="todo")
+      div
+        input(type="date" name="deadline" value="2019-01-31" min="2019-01-01" max="2019-12-31")
+      div
+        button#add(type="submit") OK

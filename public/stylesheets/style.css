@@ -1,0 +1,30 @@
+body {
+  width: 80%;
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#addTodo #delTodo{
+  clear: both;
+}
+
+div#addTodo {
+  float: left;
+}
+
+div#delTodo {
+  float: right;
+}
+
+button {
+  width: 80px;
+  border-width: 5px;
+}
+
+button#add {
+  border-width: 1px;
+}

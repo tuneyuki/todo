@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  h1= title
+  
+  p ここにTodo一覧
+  | 一覧表に、チェックボックスをつける
+  | Todoは期限の近い順に表示する
+
+  table
+    tr
+      th TODO
+      th 期日
+    form#del
+      each val, index in todo
+        tr
+          td
+              input(type="checkbox" name=val.id value=index)
+          td=val.todo
+          td=val.deadline
+
+  hr
+  #addTodo
+    form(action="/add" method="get")
+      button(type="submit") +
+
+  #delTodo
+    button(type="submit" form="del" formaction="/del" formmethod="post") -
